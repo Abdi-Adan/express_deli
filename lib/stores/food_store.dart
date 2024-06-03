@@ -21,7 +21,7 @@ abstract class _FoodStore with Store {
   Future<void> fetchFoodItems() async {
     if (foodBox.isEmpty) {
       final response = await http.get(Uri.parse(
-          'https://api.spoonacular.com/food/search?apiKey=API_KEY'));
+          'https://api.spoonacular.com/food/search?apiKey=261695cb12c848029dc8d869c377049a'));
       final  jsonData = json.decode(response.body);
       final List<dynamic> data = filterProducts(jsonData);
 
